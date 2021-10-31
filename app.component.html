@@ -1,0 +1,64 @@
+<div class="content1">
+  <!-- header containing three social questions  -->
+  <div class = "banner">
+    
+      <div class="b1">
+        <div class="img1">
+          <img  class = "image" src="https://images.squarespace-cdn.com/content/v1/5475f6eae4b0821160f6ac3e/1603382119521-3KVX2D0OXHUBKNM1HZ7W/Online+Edutcation+Decalogue.jpg">
+        </div>
+        <h3 class="heading"> Online vs Offline Education</h3>
+      </div>
+    
+      <div class="b1">
+        <div class="img1">
+            <img  class = "image" src="https://m.media-amazon.com/images/I/619TzZ8SFkL._SL1280_.jpg">
+        </div>
+        <h3 class="heading"> Reasons to like Virat?</h3>
+      </div>    
+        <!-- " -->
+      <div class="b1">
+        <div class="img1">
+          <img  class = "image" src="https://blog.droom.in/droomassets/uploads/2021/02/fuel-price-hike-reason-1200x675.jpg">
+        </div>
+        <h3 class="heading"> Petrol Prize Hike </h3>
+      </div>
+
+
+
+  </div>
+  <div class="sub">
+    <!-- Posting the data to the database -->
+    <div class="input">
+       <form #userPost="ngForm" (ngSubmit) = "onSubmit(userPost.value)">
+          <h2 class="H2">Enter your Opinion</h2>
+          <div class="post">    
+              <label for="cont"> Content</label>
+              <input type="text" name="Name" ngModel>
+          </div>
+          <div class="post">
+              <label for="url"> Url for Image</label>
+              <input type="text" name="url" ngModel>
+          </div>
+         <button class="button" type="submit"> Submit </button>
+       </form>
+    </div>
+    <div class="feed">
+
+      <!-- Getting the data from the DataBase -->
+      <div class="blocks">
+        <div class="block" *ngFor = "let name of Data">
+          <div class="tag1">
+            <img class="imagesub" src={{name[2]}}>
+          </div>
+          <div class="tag2">
+            <p class="tagline">
+                   {{name[1]}}
+              
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+</div>
